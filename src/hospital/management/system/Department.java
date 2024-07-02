@@ -25,7 +25,7 @@ public class Department extends JFrame {
 
         try{
             Conn c = new Conn();
-            String q = "select * from department";
+            String q = "select * from department;";
             ResultSet resultSet = c.statement.executeQuery(q);
             table.setModel(DbUtils.resultSetToTableModel(resultSet));
         }catch (Exception e){
